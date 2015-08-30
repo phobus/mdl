@@ -38,7 +38,7 @@
 
 		document.addEventListener('ClickTree', ListClickHandler);
 		function ListClickHandler(event) {
-			createToast('* Event || level: ' + event.detail.level + ' | id: ' + event.detail.id + ' | text: ' + event.detail.text);
+			createToast('* Event || sender: ' + event.detail.sender +' | level: ' + event.detail.level + ' | id: ' + event.detail.id + ' | text: ' + event.detail.text);
 		}
 
 	}());

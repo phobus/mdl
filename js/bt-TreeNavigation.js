@@ -186,9 +186,10 @@
 					break;
 				}
 			}
-			console.log(this.element_.id);
+
 			var event = new CustomEvent('ClickTree', {
 				'detail' : {
+					'sender' : this.element_.id,
 					'level' : level,
 					'id' : target.dataset.id,
 					'text' : target.childElementCount == 0 ? target.text : target.childNodes[1].nodeValue
