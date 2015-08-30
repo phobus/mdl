@@ -26,7 +26,7 @@
 		}
 
 		createList(2, 6);
-		html = '<div id="list" class="bt-js-tree bt-tree">' + html + '</div>';
+		html = '<div id="list" class="bt-js-tree bt-tree mdl-shadow--2dp">' + html + '</div>';
 		return html;
 
 	}());

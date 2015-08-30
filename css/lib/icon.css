@@ -18,6 +18,7 @@
 	line-height: 1;
 	text-transform: none;
 	letter-spacing: normal;
+	text-align: center;
 	word-wrap: normal;
 	/* Support for all WebKit browsers. */
 	-webkit-font-smoothing: antialiased;

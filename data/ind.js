@@ -8,7 +8,7 @@
 			html += '</ul>';
 		}
 
-		createTable(10);
+		createTable(5);
 		html = '<div id="table" class="bt-js-tree bt-tree mdl-shadow--2dp">' + html + '</div>';
 		return html;
 	}());

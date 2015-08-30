@@ -1,0 +1,72 @@
+/* Primer titulo */
+.mdl-layout__drawer > .mdl-layout-title {
+	text-align: center;
+	padding-left: 0 !important;
+	background-color: #FFFFFF;
+}
+
+/* Primer titulo segundo color */
+.mdl-layout__drawer > .mdl-layout-title span span {
+	color: #999999;
+}
+
+/* Segundo titulo */
+.mdl-layout__header .mdl-layout-title {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 36px;
+	line-height: 36px;
+	font-weight: 900;
+}
+#user-info {
+	margin: 0 16px 0 0;
+}
+#user-info span {
+	display: block;
+	text-align: right;
+}
+
+/* foto de usuario */
+#photo-user {
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+}
+/* contenedores columna izquierda */
+.mdl-layout__drawer .row-1 {
+	text-align: center;
+	padding: 4px 24px 0 24px;
+	height: 80px;
+	overflow: hidden;
+	font-size: 11px;
+}
+
+/* input uo ajuste */
+.mdl-layout__drawer .row-2 .mdl-textfield {
+	margin-top: -20px;
+}
+.mdl-layout__drawer .row-2 {
+	text-align: center;
+	padding: 0 24px 0 24px;
+}
+/* quita padding por defecto uo */
+#bt-navigation {
+	padding: 0;
+}
+
+/*********************************
+ ***   buscador aplicaciones   ***
+ *********************************/
+#panel-search > form {
+	display: flex;
+	flex-diretion: row;
+	margin-bottom: 16px;
+}
+
+#panel-search > form .mdl-textfield {
+	flex-grow: 1;
+	color: rgb(97, 97, 97);
+}
+
+.mdl-tabs__panel {
+	padding: 16px;
+}

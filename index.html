@@ -38,41 +38,81 @@
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
 		mdl-layout--fixed-header">
 			<header class="mdl-layout__header">
-				<div class="mdl-layout__header-row">
+				<div class="mdl-layout__header-row mdl-color-text--white">
+					<span class="mdl-layout-title">SGA</span>
 					<div class="mdl-layout-spacer"></div>
-					<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-					mdl-textfield--floating-label mdl-textfield--align-right">
-						<label class="mdl-button mdl-js-button mdl-button--icon"
-						for="fixed-header-drawer-exp"> <i class="material-icons">search</i> </label>
-						<div class="mdl-textfield__expandable-holder">
-							<input class="mdl-textfield__input" type="text" name="sample"
-							id="fixed-header-drawer-exp" />
-						</div>
-					</div>
+					<!--
+					<span id="value-user-name"><%=sga_user.getFullName()%></span> <img
+					id="photo-user" src="<%=sga_user.getUrlPhoto()%>"
+					alt="account_circle" />
+					-->
+					<div id="user-info">
+						<span id="value-user-name">Chuck Norris</span>
+						<span id="value-level2">Chuck Norris</span>
+					</div><img
+					id="photo-user" src="http://t0.gstatic.com/images?q=tbn:ANd9GcQpvSNEs-mPn5cVz5vue6IvCPKX7-P7r1X_ziruvDYW0eZnZ63D"
+					alt="account_circle" />
 				</div>
 			</header>
 			<div class="mdl-layout__drawer">
-				<span class="mdl-layout-title">Title</span>
-				<nav id="bt-navigation" class="mdl-navigation"></nav>
+
+				<div class="mdl-layout-title">
+					<span>My<span>website</span></span>
+				</div>
+				<div class="row-1">
+					<span id="value-level">Nivel: Entidad</span>
+				</div>
+				<div class="row-2">
+					<!-- Simple Textfield -->
+					<div class="mdl-textfield mdl-js-textfield">
+						<input class="mdl-textfield__input" type="text"
+						id="value-search-uo" />
+						<label class="mdl-textfield__label"
+						for="value-search-uo">Unidad Organizativa...</label>
+					</div>
+				</div>
+
+				<nav id="bt-navigation" class="mdl-navigation">
+					<!-- Unidad Organizativa -->
+					<!--<%=es.ncra.sisbal.HtmlBuilder.HtmlOrganizationalUnit.executeQuery(sga_user.getId(), null)%>-->
+					<!-- Unidad Organizativa END -->
+				</nav>
 			</div>
 			<main class="mdl-layout__content">
-				<div class="page-content mdl-grid">
+				<div class="page-content">
 					<!-- Your content goes here -->
 					<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
 						<div class="mdl-tabs__tab-bar">
-							<a href="#list-panel" class="mdl-tabs__tab is-active"><i class="material-icons">search</i>list</a>
-							<a href="#table-panel" class="mdl-tabs__tab"><i class="material-icons">search</i>table</a>
+							<a href="#panel-search" class="mdl-tabs__tab is-active"> <span
+							class="container-icon"> <i class="material-icons">search</i> </span>Aplicaciones </a><a href="#panel-list" class="mdl-tabs__tab"><span
+							class="container-icon"> <i class="material-icons">accessibility</i> </span>Aplicaciones mas usadas</a><a href="#panel-indicator"
+							class="mdl-tabs__tab"><span class="container-icon"> <i
+								class="material-icons">account_balance</i> </span>Indicadores</a>
 						</div>
+						<div class="mdl-tabs__panel is-active" id="panel-search">
+							<!-- Simple Textfield -->
+							<form>
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<input class="mdl-textfield__input" type="text" id="value-search-app" />
+									<label class="mdl-textfield__label" for="value-search-app">Buscar aplicacion...</label>
+								</div>
+							</form>
 
-						<div id="list-panel"  class="mdl-tabs__panel is-active">
-							<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col" >
-								<div class="mdl-card__supporting-text" id="bt-inbox"></div>
+							<div id="bt-inbox">
+								<!-- Arbol aplicaciones -->
+								<!-- <%=HtmlApplication.executeQuery(sga_user.getId(), null)%>-->
+								<!-- Arbol aplicaciones END -->
 							</div>
 						</div>
-						<div id="table-panel"  class="mdl-tabs__panel">
-							<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col" >
-								<div class="mdl-card__supporting-text" id="bt-table"></div>
-							</div>
+						<div class="mdl-tabs__panel" id="panel-list">
+							<!-- Indicadores -->
+							<!-- <%=HtmlTopApplication.executeQuery()%> -->
+							<!-- Indicadores END -->
+						</div>
+						<div class="mdl-tabs__panel" id="panel-indicator">
+							<!-- Indicadores -->
+							<!-- <%=HtmlTopApplication.executeQuery()%>
+							<!-- Indicadores END -->
 						</div>
 					</div>
 				</div>

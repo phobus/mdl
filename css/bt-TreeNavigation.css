@@ -26,17 +26,20 @@
 	-webkit-flex-shrink: 0;
 	-ms-flex-negative: 0;
 	flex-shrink: 0;
+	font-size: 13px;
 }
 
 .bt-tree i {
-	margin: -4px 6px 0 0;
+	margin: 0 6px 0 0;
+	width: 1.2em;
+	height: 1.2em;
+	line-height: 1.2em;
 }
 
 /**
  * 	Enlaces izquierda (drawer)
  */
 .mdl-layout__drawer .bt-tree a {
-	font-size: 13px;
 	color: #757575;
 	padding: 12px 0 12px 6px;
 }
@@ -98,7 +101,7 @@
 }
 
 .mdl-layout__content .bt-tree .l-3 {
-	padding-left: 7em;
+	padding-left: 6.6em;
 }
 
 .mdl-layout__content .bt-tree .circle {

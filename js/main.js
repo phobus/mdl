@@ -3,7 +3,11 @@
 
 		var btNavigation = document.getElementById('bt-navigation');
 		var btInbox = document.getElementById('bt-inbox');
-		var btTable = document.getElementById('bt-table');
+		var btList = document.getElementById('panel-list');
+		var btInd = document.getElementById('panel-indicator');
+
+		var valueLevel = document.getElementById('value-level');
+		var valueLevel2 = document.getElementById('value-level2');
 
 		atomic.post('data/nav.js').success(function(data, xhr) {
 			var object = new Function("return " + data)();
@@ -40,12 +44,23 @@
 		atomic.post('data/table.js').success(function(data, xhr) {
 			var object = new Function("return " + data)();
 
-			btTable.innerHTML = object;
+			btList.innerHTML = object;
 			circleColors();
 			componentHandler.upgradeDom();
 		}).error(function(data) {
 
 		});
+
+		atomic.post('data/ind.js').success(function(data, xhr) {
+			var object = new Function("return " + data)();
+
+			btInd.innerHTML = object;
+			circleColors();
+			componentHandler.upgradeDom();
+		}).error(function(data) {
+
+		});
+
 		document.addEventListener('ClickTree', ListClickHandler);
 		function ListClickHandler(event) {
 			var entidad = '9999',
@@ -53,6 +68,8 @@
 			    cabecera,
 			    oficina;
 			if (event.detail.sender == 'nav') {
+				valueLevel.innerText = event.detail.text;
+				valueLevel2.innerText = event.detail.text;
 				switch(event.detail.level) {
 				case 2:
 					zona = event.detail.id;
