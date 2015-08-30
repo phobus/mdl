@@ -1,0 +1,115 @@
+/**
+ * List box
+ *
+ * Se aplican distintos estilos, segun
+ * si esta a la izquierda o en el centro
+ */
+
+/**
+ * 	resetea estilos por defecto
+ */
+.bt-tree ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/**
+ * 	Enlaces
+ */
+.bt-tree a {
+	text-decoration: none;
+	font-weight: 500;
+	display: block;
+	vertical-align: middle;
+	overflow: hidden;
+	-webkit-flex-shrink: 0;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+}
+
+.bt-tree i {
+	margin: -4px 6px 0 6px;
+}
+
+/**
+ * 	Enlaces izquierda (drawer)
+ */
+.mdl-layout__drawer .bt-tree a {
+	font-size: 13px;
+	color: #757575;
+	padding: 12px 0 12px 6px;
+}
+.mdl-layout__drawer .bt-tree a:hover {
+	background-color: rgb(224, 224, 224);
+}
+
+/**
+ * 	Niveles de arbol izquierda (drawer)
+ */
+.mdl-layout__drawer .bt-tree .l-1 {
+	font-weight: 600;
+}
+
+.mdl-layout__drawer .bt-tree .l-2 {
+	padding-left: 18px;
+	font-weight: 600;
+}
+
+.mdl-layout__drawer .bt-tree .l-3 {
+	padding-left: 30px;
+	font-weight: 600;
+}
+
+.mdl-layout__drawer .bt-tree .l-4 {
+	padding-left: 65px;
+}
+/**
+ * 	Botones izquierda (drawer)
+ */
+.mdl-layout__drawer .bt-tree i {
+	border-radius: 1em;
+}
+.mdl-layout__drawer .bt-tree i:hover {
+	background-color: #FFFFFF;
+}
+/**
+ * 	Enlaces centro (content)
+ */
+.mdl-layout__content .bt-tree a {
+	position: relative;
+	height: 48px;
+	line-height: 48px;
+	border-top: 1px solid rgba(0,0,0,.12);
+	border-bottom: 1px solid rgba(0,0,0,.12);
+	/*padding: 12px 18px 0;*/
+	box-sizing: border-box;
+	color: rgba(0, 0, 0, 0.870588);
+}
+.mdl-layout__content .bt-tree a:hover {
+	background-color: #eeeeee;
+}
+.mdl-layout__content .bt-tree .l-1 {
+	font-weight: 600;
+}
+
+.mdl-layout__content .bt-tree .l-2 {
+	padding-left: 2em;
+	font-weight: 600;
+}
+
+.mdl-layout__content .bt-tree .l-3 {
+	padding-left: 5em;
+}
+
+.mdl-layout__content .bt-tree .circle {
+	width: 32px;
+	height: 32px;
+	border-radius: 32px;
+	line-height: 32px;
+	display: inline-block;
+	text-align: center;
+	font-weight: 600;
+	color: #FFF;
+	margin-right: 16px;
+}

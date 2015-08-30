@@ -1,38 +1,68 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Test</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Test</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<!-- Place favicon.ico in the root directory -->
 		<!--
-        <link rel="stylesheet" href="css/normalize.css">
-        -->
-        <link rel="stylesheet" href="css/main.css">
-        <!--
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        -->
-        <!-- mdl 1.0.4 -->
-        <link rel="stylesheet" href="css/lib/bt-material.min.css">
-        <link rel="stylesheet" href="css/lib/icon.css">
-        <script src="js/lib/material.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+		<link rel="stylesheet" href="css/normalize.css">
+		-->
+		<link rel="stylesheet" href="css/main.css">
+		<script src="js/lib/modernizr-2.8.3.min.js"></script>
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+		<!-- mdl 1.0.4 -->
+		<link rel="stylesheet" href="css/lib/bt-material.min.css">
+		<link rel="stylesheet" href="css/lib/icon.css">
+		<link rel="stylesheet" href="css/lib/mdl-snackbar.css">
+		<script src="js/lib/material.min.js"></script>
+		<script src="js/lib/snackbar.js"></script>
 
+		<!--  mdl TreeNavigation -->
+		<link rel="stylesheet" href="css/bt-TreeNavigation.css">
+		<script src="js/bt-TreeNavigation.js"></script>
+	</head>
+	<body>
+		<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+		<!-- Add your site or application content here -->
+		<!-- The drawer is always open in large screens. The header is always shown,
+		even in small screens. -->
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+		mdl-layout--fixed-header">
+			<header class="mdl-layout__header">
+				<div class="mdl-layout__header-row">
+					<div class="mdl-layout-spacer"></div>
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+					mdl-textfield--floating-label mdl-textfield--align-right">
+						<label class="mdl-button mdl-js-button mdl-button--icon"
+						for="fixed-header-drawer-exp"> <i class="material-icons">search</i> </label>
+						<div class="mdl-textfield__expandable-holder">
+							<input class="mdl-textfield__input" type="text" name="sample"
+							id="fixed-header-drawer-exp" />
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="mdl-layout__drawer">
+				<span class="mdl-layout-title">Title</span>
+				<nav id="bt-navigation" class="mdl-navigation"></nav>
+			</div>
+			<main class="mdl-layout__content">
+				<div class="page-content" id="bt-inbox">
+					<!-- Your content goes here -->
+
+				</div>
+			</main>
+		</div>
 		<script src="js/lib/atomic.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
-
-    </body>
+		<script src="js/plugins.js"></script>
+		<script src="js/main.js"></script>
+	</body>
 </html>
