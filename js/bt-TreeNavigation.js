@@ -183,15 +183,37 @@
 				var c = target.classList[i];
 				if (c.indexOf('l-') == 0) {
 					level = c.split('-')[1];
+					level = parseInt(level);
 					break;
 				}
 			}
 
+			var node = {};
+			if (level && level - 1 > 0) {
+				var n = node;
+				var link = target;
+				for (var i = level - 1; i > 0; i--) {
+					link = link.parentNode.parentNode.parentNode.firstChild;
+					n['id'] = link.dataset.id;
+					n['level'] = i;
+					n['text'] = link.childNodes[1].nodeValue;
+
+					if (i != 1) {
+						n['parent'] = {};
+						n = n['parent'];
+					}
+				}
+
+				//console.log(target.parentNode.parentNode.parentNode.firstChild.dataset);
+			} else {
+
+			}
 			var event = new CustomEvent('ClickTree', {
 				'detail' : {
 					'sender' : this.element_.id,
 					'level' : level,
 					'id' : target.dataset.id,
+					'parent' : node,
 					'text' : target.childElementCount == 0 ? target.text : target.childNodes[1].nodeValue
 				}
 			});

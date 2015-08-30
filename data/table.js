@@ -1,12 +1,11 @@
 ( function() {
+		var html = '';
 		function createTable(rows) {
-			html += '<table><tbody>';
+			html += '<ul>';
 			for (var i = 0; i < rows; i++) {
-				html += '<tr><td><a><spam class="circle">'+ 
-				+
-				'</spam></a></td></tr>';
+				html += '<li><a><spam class="circle">' + randNum() + '</spam>' + randText(6) + '</a></li>';
 			}
-			html += '</tbody></table>';
+			html += '</ul>';
 		}
 
 		createTable(10);
