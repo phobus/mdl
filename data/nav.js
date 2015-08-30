@@ -8,13 +8,13 @@
 			loop++;
 			html += '<ul>';
 			if (level == 0) {
-				html += '<li><a data-id="' + level + '1" href="" class="l-' + loop + '">item 0' + loop + '0</a></li>';
-				html += '<li><a data-id="' + level + '2" href="" class="l-' + loop + '">item 05' + loop + '</a></li>';
-				html += '<li><a data-id="' + level + '3" href="" class="l-' + loop + '">item 14' + loop + '</a></li>';
+				html += '<li><a data-id="' + level + '1" href="" class="l-' + loop + '">' + randText(5) + '</a></li>';
+				html += '<li><a data-id="' + level + '2" href="" class="l-' + loop + '">' + randText(6) + '</a></li>';
+				html += '<li><a data-id="' + level + '3" href="" class="l-' + loop + '">' + randText(4) + '</a></li>';
 			} else {
 				for (var i = 0; i < num; i++) {
 					html += '<li>';
-					html += '<a href="" data-id="' + i + '" class="l-' + loop + '">' + arrow + 'level  ' + loop + '</a>';
+					html += '<a href="" data-id="' + i + '" class="l-' + loop + '">' + arrow + randText(3) + '</a>';
 					createList(level - 1, num, loop);
 					html += '</li>';
 				}

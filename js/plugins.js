@@ -43,16 +43,64 @@
 		var mdlColors = {
 			"background" : "mdl-color--",
 			"text" : "mdl-color--text--",
-			"colors" : ["red", "pink", "purple", "deep-purple", "indigo", "blue", "light-blue", "cyan", "teal", "green", "light-green", "lime", "yellow", "amber", "orange", "deep-orange", "brown", "grey", "blue-grey", "black", "white"]
+			"colors" : ["red", "pink", "purple", "deep-purple", "indigo", "blue", "light-blue", "cyan", "teal", "green", "light-green", "lime", "yellow", "amber", "orange", "deep-orange", "brown", "grey", "blue-grey"]
+
 		};
+		//"colors" : ["red", "pink", "purple", "deep-purple", "indigo", "blue", "light-blue", "cyan", "teal", "green", "light-green", "lime", "yellow", "amber", "orange", "deep-orange", "brown", "grey", "blue-grey", "black", "white"]
 
 		function getClassColor(id) {
 			return colors[id];
 		}
 
+		var l = 'Lorem ipsum dolor sit amet consectetur adipisicing elit ';
+		l += 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ';
+		l += 'Ut enim ad minim veniam ';
+		l += 'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat ';
+		l += 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat ';
+		l += 'nulla pariatur Excepteur sint occaecat cupidatat non proident ';
+		l += 'sunt in culpa qui officia deserunt mollit anim id est laborum ';
+		l = l.toLowerCase();
+		var words = l.split(' ');
+		function randText(size) {
+			var r;
+			var out = '';
+			for (var x = 0; x < size; x++) {
+				r = Math.floor((Math.random() * words.length) + 1);
+				out += words[r] + ' ';
+			}
+			out = out.trim();
+			return out.charAt(0).toUpperCase() + out.slice(1);
+		}
+
+
+		window.randText = randText;
+
 		var colors = {};
+		var abc = '1234567890ABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
+		function randChar() {
+			var r = Math.floor((Math.random() * abc.length));
+			console.log(r, abc[r]);
+			return abc[r];
+		}
+
+
+		window.randChar = randChar;
+
+		function randNum() {
+			var num = '1234567890';
+			var r;
+			var out = '';
+			for (var i = 0; i < 3; i++) {
+				r = Math.floor((Math.random() * num.length));
+				out += num[r];
+			}
+			return out;
+		}
+
+
+		window.randNum = randNum;
 		function gen() {
-			var abc = '1234567890ABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
+
 			var js = '';
 			var idColor = 0;
 			for (var i = 0; i < abc.length; i++) {
@@ -72,7 +120,11 @@
 			var id;
 			for (var x = 0; x < size; x++) {
 				id = nodes[x].textContent;
-				nodes[x].classList.add(colors[id]);
+				if (id && id.length > 0) {
+					id = id[0];
+					nodes[x].classList.add(colors[id]);
+				}
+
 			}
 		}
 

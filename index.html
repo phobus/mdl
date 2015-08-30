@@ -58,9 +58,21 @@
 			<main class="mdl-layout__content">
 				<div class="page-content mdl-grid">
 					<!-- Your content goes here -->
-					<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col" >
-						<div class="mdl-card__supporting-text" id="bt-inbox">
+					<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+						<div class="mdl-tabs__tab-bar">
+							<a href="#list-panel" class="mdl-tabs__tab is-active"><i class="material-icons">search</i>list</a>
+							<a href="#table-panel" class="mdl-tabs__tab"><i class="material-icons">search</i>table</a>
+						</div>
 
+						<div id="list-panel"  class="mdl-tabs__panel is-active">
+							<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col" >
+								<div class="mdl-card__supporting-text" id="bt-inbox"></div>
+							</div>
+						</div>
+						<div id="table-panel"  class="mdl-tabs__panel">
+							<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col" >
+								<div class="mdl-card__supporting-text" id="bt-inbox"></div>
+							</div>
 						</div>
 					</div>
 				</div>
